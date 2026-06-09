@@ -1,0 +1,266 @@
+/* Polices et resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #354f3d; /* Vert foncé pour le texte */
+    background-color: #f5f1ea; /* Fond crème clair */
+}
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #2a4d34; /* Vert forêt pour les titres */
+    margin-bottom: 0.5em;
+}
+a {
+    color: #2a4d34;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header / Navigation */
+header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo img {
+    height: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li:first-child {
+    margin-left: 0;
+}
+nav ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+#nav-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Section Bannière (Hero) */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 500px;
+    filter: brightness(70%);
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero h1 {
+    font-size: 3em;
+}
+.hero .slogan {
+    font-style: italic;
+    font-size: 1.5em;
+}
+.hero .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #9db176; /* Vert sauge accent */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.hero .btn:hover {
+    background-color: #869d5e;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+section h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.intro p {
+    margin-bottom: 1em;
+}
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.highlights .card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.highlights .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.highlights .card h3 {
+    margin-top: 10px;
+}
+.call-out {
+    background-color: #9db176;
+    color: white;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+.call-out p {
+    font-size: 1.1em;
+}
+
+/* Menus */
+.menu {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+.menu h3 {
+    margin-bottom: 0.5em;
+}
+.menu ul {
+    margin-left: 20px;
+}
+
+/* Page Producteurs */
+.producer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.producer {
+    background-color: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.producer img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.producer h3 {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Formulaire de Réservation */
+form {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    margin-top: 15px;
+    background-color: #9db176;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+}
+form button:hover {
+    background-color: #869d5e;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+footer a {
+    color: #e9c46a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    #nav-toggle {
+        display: block;
+    }
+    .hero h1 { font-size: 2em; }
+    .hero .slogan { font-size: 1.2em; }
+    .highlights { flex-direction: column; }
+    .producer-list { flex-direction: column; }
+}
